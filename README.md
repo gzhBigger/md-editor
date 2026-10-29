@@ -16,7 +16,7 @@
 
 ## 📦 安装
 
-从 [GitHub Releases](https://github.com/gzh330205/md-editor/releases/latest) 下载：
+从 [GitHub Releases](https://github.com/gzhBigger/md-editor/releases/latest) 下载：
 
 | 文件 | 说明 |
 |---|---|

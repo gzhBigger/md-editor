@@ -6,7 +6,7 @@
 
 Tauri 2 + Vue 3 (TypeScript) 桌面 Markdown 编辑器：左编辑（CodeMirror 6）右预览（marked）分屏，支持多标签页、文件树、KaTeX/Mermaid、暗色主题、自动更新（GitHub Release + tauri-plugin-updater）。
 
-- 仓库：`https://github.com/gzh330205/md-editor`（**公开**，自动更新依赖公开资产）
+- 仓库：`https://github.com/gzhBigger/md-editor`（**公开**，自动更新依赖公开资产）
 - 前端：`src/`（Vue 3 + Vite），外壳：`src-tauri/`（Rust）
 - 自动更新：NSIS 安装包 + 签名（`.sig`）+ `latest.json` 清单，端点指向 GitHub Release
 
@@ -64,11 +64,11 @@ git push
 
 ```bash
 # 更新清单可公开访问（应返回 200 且 JSON 中 version 正确）：
-curl -sL "https://github.com/gzh330205/md-editor/releases/latest/download/latest.json"
+curl -sL "https://github.com/gzhBigger/md-editor/releases/latest/download/latest.json"
 
 # 安装包可下载（应 200）：
 curl -sL -o /dev/null -w "%{http_code}" \
-  "https://github.com/gzh330205/md-editor/releases/download/v<版本>/md-editor_<版本>_x64-setup.exe"
+  "https://github.com/gzhBigger/md-editor/releases/download/v<版本>/md-editor_<版本>_x64-setup.exe"
 ```
 
 - 注意：刚上传的资产可能需要数十秒传播，404 时可等待后重试；持续 404 先检查仓库是否为 public。
@@ -76,7 +76,7 @@ curl -sL -o /dev/null -w "%{http_code}" \
 
 ### 5. 回滚/撤销
 
-- 如发布有误：`gh release delete v<版本> --repo gzh330205/md-editor --cleanup-tag`，然后修复后重新发布新版本号。
+- 如发布有误：`gh release delete v<版本> --repo gzhBigger/md-editor --cleanup-tag`，然后修复后重新发布新版本号。
 - **不要复用已发布过的版本号**（更新比对靠版本号，重复会混淆）。
 
 ## 项目注意事项（已知坑，改代码前必读）

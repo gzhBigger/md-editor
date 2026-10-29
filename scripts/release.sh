@@ -51,12 +51,12 @@ PUB_DATE="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
 cat > "$BUNDLE/latest.json" <<EOF
 {
   "version": "$VERSION",
-  "notes": "https://github.com/gzh330205/md-editor/releases/tag/v$VERSION",
+  "notes": "https://github.com/gzhBigger/md-editor/releases/tag/v$VERSION",
   "pub_date": "$PUB_DATE",
   "platforms": {
     "windows-x86_64": {
       "signature": "$SIGNATURE",
-      "url": "https://github.com/gzh330205/md-editor/releases/download/v$VERSION/md-editor_${VERSION}_x64-setup.exe"
+      "url": "https://github.com/gzhBigger/md-editor/releases/download/v$VERSION/md-editor_${VERSION}_x64-setup.exe"
     }
   }
 }
@@ -67,7 +67,7 @@ echo "==> latest.json 已生成"
 echo "==> 创建 GitHub Release v$VERSION 并上传资产"
 gh release create "v$VERSION" \
   "$NSIS" "$SIG" "$MSI" "$BUNDLE/latest.json" \
-  --repo gzh330205/md-editor \
+  --repo gzhBigger/md-editor \
   --title "v$VERSION" \
   --notes "**Markdown 编辑器 v$VERSION**
 
@@ -77,5 +77,5 @@ gh release create "v$VERSION" \
 
 echo ""
 echo "✅ Release v$VERSION 发布完成！"
-echo "   下载页: https://github.com/gzh330205/md-editor/releases/tag/v$VERSION"
-echo "   更新清单: https://github.com/gzh330205/md-editor/releases/latest/download/latest.json"
+echo "   下载页: https://github.com/gzhBigger/md-editor/releases/tag/v$VERSION"
+echo "   更新清单: https://github.com/gzhBigger/md-editor/releases/latest/download/latest.json"
